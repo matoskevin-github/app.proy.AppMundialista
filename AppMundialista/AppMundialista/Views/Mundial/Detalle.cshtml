@@ -1,0 +1,17 @@
+﻿@model AppMundialista.Models.Equipos
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>@Model.Nombre</h2>
+
+<img src="~/Content/Images/@Model.Imagen" class="img-thumbnail" />
+
+<h2>Listado de Jugadores</h2>
+
+<ul>
+    @foreach (var jugador in Model.Jugadores )
+    {
+        <li>@jugador.Nombre (@jugador.Posicion )</li>
+    }
+</ul>

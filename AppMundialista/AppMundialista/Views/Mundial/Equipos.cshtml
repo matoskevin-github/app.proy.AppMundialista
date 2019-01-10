@@ -1,0 +1,19 @@
+﻿@model List<AppMundialista.Models.Equipos>
+@{
+    ViewBag.Title = "Equipos";
+}
+
+<h2>Equipos Mundialista</h2>
+<hr />
+
+@foreach (var equipo in Model)
+{
+    <div style="float:left; width:40%; margin:20px; text-align:center">
+        <img src="~/Content/Images/@equipo.Imagen" class="img-thumbnail" />
+        <a href="@Url.Action("Detalle","Mundial",new { IdEquipo = equipo.IdEquipo })">@equipo.Nombre</a>
+    </div>    
+}
+
+   
+
+
